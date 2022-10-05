@@ -7,7 +7,7 @@
   "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://git.sr.ht/~harmtemolder/karabiner-vim-mode-plus/blob/master/vim_mode_plus.json",
   "rules": [
     {
-      "description": "(Vim 1/11) caps_lock -> on, caps_lock, esc, control+[ or any pointing_button -> off",
+      "description": "(Vim 1/12) caps_lock -> on, caps_lock, enter, esc, control+[ or any pointing_button -> off",
       "manipulators": [
         {
           "type": "basic",
@@ -52,7 +52,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -89,7 +92,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -122,7 +128,49 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
+              ]
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "vim_mode",
+                "value": 0
+              }
+            },
+            {
+              "shell_command": "osascript -e 'display notification with title \"-- INSERT --\"'"
+            },
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.googlecode.iterm2",
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -160,7 +208,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -193,7 +244,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -230,7 +284,7 @@
       ]
     },
     {
-      "description": "(Vim 2/11) finger on trackpad + any key -> off",
+      "description": "(Vim 2/12) finger on trackpad + any key -> off",
       "available_since": "12.6.9",
       "manipulators": [
         {
@@ -265,7 +319,7 @@
       ]
     },
     {
-      "description": "(Vim 3/11) visual mode + h,j,k,l,e,b,0,^,$,gg,G,{,} + d,y,c,x",
+      "description": "(Vim 3/12) visual mode + h,j,k,l,e,b,0,^,$,gg,G,{,} + d,y,c,x",
       "manipulators": [
         {
           "type": "basic",
@@ -296,7 +350,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -340,7 +397,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -370,7 +430,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -400,7 +463,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -430,7 +496,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -460,7 +529,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -491,7 +563,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -522,7 +597,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -560,7 +638,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -596,7 +677,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -632,7 +716,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -675,7 +762,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -717,7 +807,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -758,7 +851,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -794,7 +890,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -830,7 +929,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -875,7 +977,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -920,7 +1025,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -965,7 +1073,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1007,7 +1118,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1039,7 +1153,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1071,7 +1188,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1103,7 +1223,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1116,7 +1239,7 @@
       ]
     },
     {
-      "description": "(Vim 4/11) dd,de,db,d0,d^,d$,dgg,dG,d{,d}",
+      "description": "(Vim 4/12) dd,de,db,d0,d^,d$,dgg,dG,d{,d}",
       "manipulators": [
         {
           "type": "basic",
@@ -1151,7 +1274,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1211,7 +1337,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1259,7 +1388,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1307,7 +1439,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1362,7 +1497,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1415,7 +1553,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1468,7 +1609,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1522,7 +1666,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1575,7 +1722,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1628,7 +1778,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1681,7 +1834,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1727,7 +1883,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1745,7 +1904,7 @@
       ]
     },
     {
-      "description": "(Vim 5/11) yy,ye,yb,y0,y^,y$,ygg,yG,y{,y}",
+      "description": "(Vim 5/12) yy,ye,yb,y0,y^,y$,ygg,yG,y{,y}",
       "manipulators": [
         {
           "type": "basic",
@@ -1780,7 +1939,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1840,7 +2002,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1888,7 +2053,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1936,7 +2104,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -1991,7 +2162,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2044,7 +2218,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2097,7 +2274,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2151,7 +2331,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2204,7 +2387,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2257,7 +2443,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2310,7 +2499,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2363,7 +2555,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2381,7 +2576,7 @@
       ]
     },
     {
-      "description": "(Vim 6/11) cc,ce,cb,c0,c^,c$,cgg,cG,c{,c}",
+      "description": "(Vim 6/12) cc,ce,cb,c0,c^,c$,cgg,cG,c{,c}",
       "manipulators": [
         {
           "type": "basic",
@@ -2416,7 +2611,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2485,7 +2683,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2542,7 +2743,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2599,7 +2803,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2663,7 +2870,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2725,7 +2935,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2787,7 +3000,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2841,7 +3057,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2903,7 +3122,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -2965,7 +3187,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3027,7 +3252,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3089,7 +3317,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3107,7 +3338,7 @@
       ]
     },
     {
-      "description": "(Vim 7/11) x,X,p,P,u,control+r",
+      "description": "(Vim 7/12) x,X,p,P,u,control+r",
       "manipulators": [
         {
           "type": "basic",
@@ -3126,7 +3357,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3158,7 +3392,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3188,7 +3425,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3223,7 +3463,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3253,7 +3496,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3289,7 +3535,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3302,7 +3551,7 @@
       ]
     },
     {
-      "description": "(Vim 8/11) h,j,k,l (+ control/option/command/shift),e,b,0,^,$,gg,G,{,}",
+      "description": "(Vim 8/12) h,j,k,l (+ control/option/command/shift),e,b,0,^,$,gg,G,{,}",
       "manipulators": [
         {
           "type": "basic",
@@ -3329,7 +3578,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3364,7 +3616,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3399,7 +3654,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3434,7 +3692,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3464,7 +3725,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3494,7 +3758,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3530,7 +3797,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3565,7 +3835,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3600,7 +3873,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3643,7 +3919,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3684,7 +3963,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3724,7 +4006,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3759,7 +4044,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3794,7 +4082,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3807,7 +4098,7 @@
       ]
     },
     {
-      "description": "(Vim 9/11) i,I,a,A,o,O",
+      "description": "(Vim 9/12) i,I,a,A,o,O",
       "manipulators": [
         {
           "type": "basic",
@@ -3832,7 +4123,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3876,7 +4170,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3909,7 +4206,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3953,7 +4253,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -3995,7 +4298,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4045,7 +4351,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4058,7 +4367,7 @@
       ]
     },
     {
-      "description": "(Vim 10/11) s,m,spacebar -> Hammerspoon modals",
+      "description": "(Vim 10/12) s,m,spacebar -> Hammerspoon modals",
       "manipulators": [
         {
           "type": "basic",
@@ -4086,7 +4395,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4122,7 +4434,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4158,7 +4473,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4171,7 +4489,76 @@
       ]
     },
     {
-      "description": "(Vim 11/11) disable unused keys",
+      "description": "(Vim 11/12) Delete and Archive for Apple Mail",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "w"
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.googlecode.iterm2",
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
+              ]
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "q"
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": [
+                "left_command",
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.googlecode.iterm2",
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
+              ]
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "(Vim 12/12) disable unused keys",
       "manipulators": [
         {
           "type": "basic",
@@ -4195,7 +4582,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4227,7 +4617,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4259,7 +4652,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4291,7 +4687,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4323,7 +4722,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4355,7 +4757,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4387,7 +4792,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4419,7 +4827,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
@@ -4451,7 +4862,10 @@
                 "com.googlecode.iterm2",
                 "com.github.atom",
                 "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss"
+                "com.jetbrains.intellij",
+                "com.visualstudio.code.oss",
+                "md.obsidian",
+                "io.imdone.app"
               ]
             },
             {
