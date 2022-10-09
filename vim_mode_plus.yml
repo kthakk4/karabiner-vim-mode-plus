@@ -4,11 +4,11 @@ maintainers:
 homepage: https://git.sr.ht/~harmtemolder/karabiner-vim-mode-plus
 import_url: karabiner://karabiner/assets/complex_modifications/import?url=https://git.sr.ht/~harmtemolder/karabiner-vim-mode-plus/blob/master/vim_mode_plus.json
 rules:
-  - description: (Vim 1/12) Esc -> on, caps_lock, enter, esc, control+[ or any pointing_button -> off
+  - description: (Vim 1/12) caps_lock -> on, caps_lock, enter, esc, control+[ or any pointing_button -> off
     manipulators:
-      - type: basic  # [Esc] Enter vim mode
+      - type: basic  # [Caps Lock] Enter vim mode
         from:
-          key_code: escape
+          key_code: caps_lock
         to_if_alone:
           - set_variable:
               name: vim_mode
